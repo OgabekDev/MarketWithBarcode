@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_navigation"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="dev.ogabek.marketwithbarcode.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_createFragment"
+            app:destination="@id/createFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="dev.ogabek.marketwithbarcode.fragment.CreateFragment"
+        android:label="fragment_create"
+        tools:layout="@layout/activity_create" >
+        <argument
+            android:name="barcode"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="dev.ogabek.marketwithbarcode.fragment.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/activity_details" >
+        <argument
+            android:name="product"
+            app:argType="dev.ogabek.marketwithbarcode.model.Product" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="dev.ogabek.marketwithbarcode.fragment.ScanFragment"
+        android:label="fragment_scan"
+        tools:layout="@layout/activity_scan" >
+        <action
+            android:id="@+id/action_scanFragment_to_createFragment"
+            app:destination="@id/createFragment" />
+        <action
+            android:id="@+id/action_scanFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="dev.ogabek.marketwithbarcode.fragment.StatisticsFragment"
+        android:label="fragment_statistics"
+        tools:layout="@layout/activity_statistics" />
+</navigation>

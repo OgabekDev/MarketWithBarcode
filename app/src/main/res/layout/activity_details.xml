@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DetailsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/no_photo"
+                android:adjustViewBounds="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/black"
+                    android:text="No Image Available"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"/>
+
+                <TextView
+                    android:id="@+id/tvQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="10dp"
+                    android:textStyle="normal"
+                    android:text="Quantity : 15"/>
+
+                <TextView
+                    android:id="@+id/tvBarcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:text="Barcode : 15000000"/>
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:text="Price : 15000 UZS"/>
+
+                <TextView
+                    android:id="@+id/tvPriceForSale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:text="Price For Sale : 20000 UZS"/>
+
+                <TextView
+                    android:id="@+id/tvPriceAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:text="Price All Products : 225000 UZS"/>
+
+                <TextView
+                    android:id="@+id/tvPriceForSaleAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:text="Price All Products For Sale : 300000 UZS"/>
+
+                <TextView
+                    android:id="@+id/tvIncome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:text="Income Per Product : 5000 UZS"/>
+
+                <TextView
+                    android:id="@+id/tvIncomeForAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:text="Income All Product : 75000 UZS"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btnSell"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/holo_green_light"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:layout_margin="5dp"
+                    android:textStyle="normal"
+                    android:text="Sell"/>
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/holo_blue_bright"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_margin="5dp"
+                    android:textAllCaps="false"
+                    android:textStyle="normal"
+                    android:text="Add More"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>
